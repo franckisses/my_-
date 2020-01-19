@@ -79,11 +79,15 @@ WSGI_APPLICATION = 'dashop1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dadashop1',
+        'USER':'root',
+        'HOST':'localhost',
+        'PASSWORD':'123456',
+        'PORT'3306
     }
 }
-
+# create database dadashop1 default charset utf8;
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -151,6 +155,3 @@ CORS_ALLOW_HEADERS = (
 'HTTP_AUTHORIZATION'
 )
 
-
-b'{"uname":"franck","password":"12345678","phone":"13091463622",
-"email":"dada@tedu.cn","cart":null}'
